@@ -1,0 +1,79 @@
+/* With .sass file extension*/
+/* We should not use curly brases { } & semicolons ; */
+/* body 
+        padding:1em
+        background:red
+
+*/
+html, body, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: tomato;
+  font-family: sans-serif, "cursive";
+}
+
+h1 {
+  color: blue;
+}
+
+p {
+  color: green;
+}
+
+.container {
+  width: 100%;
+  height: 200px;
+  border: solid 2px gray;
+}
+.container nav ul li {
+  color: white;
+}
+.container nav a {
+  text-decoration: none;
+}
+
+h2 {
+  color: blue;
+  font-size: 25px;
+  font-weight: bold;
+  border: 1px solid yellow;
+  background-color: violet;
+}
+
+.myDiv1 {
+  background-color: yellow;
+  border: 10px solid pink;
+  width: 30%;
+  height: 100px;
+}
+
+.myDiv2 {
+  background-color: blue;
+  border: 10px solid green;
+  width: 30%;
+  height: 100px;
+}
+
+.button1, .button2 {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+  font-size: 1em;
+}
+
+.button2 {
+  color: red;
+}
+
+.navigation a {
+  text-decoration: none;
+}
+.navigation a:hover {
+  color: red;
+  background-color: skyblue;
+}
+
+/*# sourceMappingURL=style.css.map */

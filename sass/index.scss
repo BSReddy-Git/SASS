@@ -1,0 +1,112 @@
+/* With .sass file extension*/
+/* We should not use curly brases { } & semicolons ; */ 
+/* body 
+        padding:1em
+        background:red
+        
+*/
+
+// Variable 
+
+@import 'default';
+
+$primary-color: tomato ;
+$primary-font: sans-serif,'cursive';
+body {
+    background-color: $primary-color;
+    font-family: $primary-font;
+}
+
+// SASS Variable Scope
+
+$myColor: green;
+h1 {
+    $myColor:blue;
+    // to make this blue color to global we use !global -- $myColor:blue !global;
+    color:$myColor;
+}
+p {
+    color: $myColor;
+}
+
+
+// Nesting
+
+.container {
+    width: 100%;
+    height: 200px;
+    border: solid 2px gray;
+    nav {
+        ul{
+            li{
+                color: white;
+            }
+        }
+        a{
+            text-decoration: none;
+        }
+    }
+}
+
+// Partials
+
+//mixin
+@mixin fav-color {
+    color: blue;
+}
+
+@mixin imp-text {
+    @include fav-color; // Mixin can also include another mixin
+    font-size: 25px;
+    font-weight: bold;
+    border: 1px solid yellow;
+}
+
+h2 {
+    @include imp-text;
+    background-color: violet;
+}
+//Passing variables to Mixin
+@mixin divStyle($bgColor, $borderColor){
+    background-color: $bgColor;
+    border: 10px solid $borderColor;
+}
+
+.myDiv1 {
+    @include divStyle(yellow, pink);
+    width:30%;
+    height: 100px;
+}
+.myDiv2 {
+    @include divStyle(blue, green);
+    width:30%;
+    height: 100px;
+}
+
+
+// Extend or inheritance 
+
+.button1 {
+    border:1px solid #ccc;
+    padding: 10px;
+    color: #333;
+    font-size: 1em;
+}
+.button2 {
+    @extend .button1;
+    color: red;
+}
+
+// Pseudo Selector
+
+.navigation {
+    a{
+        text-decoration: none;
+        &:hover{
+            color: red;
+            background-color: skyblue;
+        }
+    }
+}
+
+
